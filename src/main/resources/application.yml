@@ -1,1 +1,9 @@
 
+server:
+  port: 8080
+  ssl:
+    key-store: ${KEY_STORE:classpath:server-demo.p12}
+    key-store-type: PKCS12
+    key-store-password: ""
+    key-password: ""
+    enabled: ${SSL_ENABLED:false}

@@ -4,7 +4,7 @@ WORKDIR /app
 COPY ./  ./
 RUN mvn clean package -DskipTests
 
-FROM openjdk:11.0.2-jre-slim-stretch
+FROM openjdk:23-slim
 
 COPY --from=builder /app/target/ak-sk-demo.jar  /bin/
 

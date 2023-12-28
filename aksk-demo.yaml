@@ -15,9 +15,12 @@ spec:
         app: aksk-demo
     spec:
       containers:
-        - image: release-ci.daocloud.io/skoala/demo/aksk-demo:0.1.0
+        - image: release-ci.daocloud.io/skoala/demo/aksk-demo:0.1.1
           imagePullPolicy: Always
           name: aksk-demo
+          env:
+            - name: SSL_ENABLED
+              value: 'true'
           ports:
             - containerPort: 8080
               name: http
